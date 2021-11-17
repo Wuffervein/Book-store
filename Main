@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+
+int Comics;
+int Books;
+int Doujins;
+int Wallet = 25;
+float customerinput;
+
+
+int main()
+{
+
+        while (Wallet >= 0)
+        {
+                cout << "\n\n Akihabara Print Store\n\n";
+                cout << "Book Menu\n\n";
+                cout << "1   Comics    $3\n";
+                cout << "2   Books     $5\n";
+                cout << "3   Doujins   $10\n\n";
+                cout << "You have\n" << Comics << "Comics\n" << Books << "Books\n" << Doujins << "Doujins\n\n";
+                cout << "Wallet balance $" << Wallet << ".\n\n";
+                cout << "Please enter item number you wish to purchase, type 4 to conclude shopping\n\n\n";
+                cin >> customerinput;
+
+                if (customerinput == 1)
+                {
+                    Comics++;
+                    Wallet = Wallet - 3;
+                }
+
+                if (customerinput == 2)
+                {
+                    Books++;
+                    Wallet = Wallet - 5;
+                }
+
+                if (customerinput == 3)
+                {
+                    Doujins++;
+                    Wallet = Wallet - 10;
+                }
+
+                if (Wallet <=0)
+                {
+                    cout << "Sorry insufficient funds";
+                }
+
+                if (customerinput == 4)
+                {
+                    cout << "\n\n Thank you for shopping!\n\n";
+                    cin.get();
+                    return 0;
+                }
+
+
+        }
+
+    cin.get();
+    return 0;
+}
