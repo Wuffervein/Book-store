@@ -4,7 +4,7 @@ using namespace std;
 
 int Comics;
 int Books;
-int Doujins;
+int Manga;
 int Wallet = 25;
 float customerinput;
 
@@ -18,8 +18,8 @@ int main()
                 cout << "Book Menu\n\n";
                 cout << "1   Comics    $3\n";
                 cout << "2   Books     $5\n";
-                cout << "3   Doujins   $10\n\n";
-                cout << "You have\n" << Comics << "Comics\n" << Books << "Books\n" << Doujins << "Doujins\n\n";
+                cout << "3   Manga   $10\n\n";
+                cout << "You have\n" << Comics << "Comics\n" << Books << "Books\n" << Manga << "Manga\n\n";
                 cout << "Wallet balance $" << Wallet << ".\n\n";
                 cout << "Please enter item number you wish to purchase, type 4 to conclude shopping\n\n\n";
                 cin >> customerinput;
@@ -38,7 +38,7 @@ int main()
 
                 if (customerinput == 3)
                 {
-                    Doujins++;
+                    Manga++;
                     Wallet = Wallet - 10;
                 }
 
